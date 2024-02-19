@@ -1,6 +1,6 @@
 if (navigator.serviceWorker) {
 
-    navigator.serviceWorker.register('/sw.js').then().catch(console.log); 
+    navigator.serviceWorker.register('sw.js').then().catch(console.log); 
 
     function giphyCacheClean(giphys) {
         navigator.serviceWorker.getRegistration().then(function(req) {
