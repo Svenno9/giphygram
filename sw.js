@@ -9,9 +9,7 @@ const staticAssets = [
 
   "images/flame.png",
   "images/logo.png",
-  "images/sync.png",
-
-  "/images/icons/favicon-32x32.png"
+  "images/sync.png"
 ]
 
 const staticAssetsCacheName = `static-${version}`
