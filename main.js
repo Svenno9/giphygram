@@ -1,13 +1,17 @@
+// Here the app sets up the service worker. 
 if (navigator.serviceWorker) {
 
     navigator.serviceWorker.register('sw.js').then().catch(console.log); 
 
     function giphyCacheClean(giphys) {
         navigator.serviceWorker.getRegistration().then(function(req) {
+            // send message from app to service worker. The service worker has a listener that listens for this message. 
             if (req.active) req.active.postMessage({ action: 'cleanGiphyCache', giphys: giphys})
         })
     }
 }
+
+// === Below here is a plain js app === 
 
 // Giphy API object
 var giphy = {
